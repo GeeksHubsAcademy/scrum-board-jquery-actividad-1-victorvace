@@ -1,45 +1,76 @@
 $( document ).ready( function () {
     let addListInput = $( '.addListWrapper input' );
+    let addTaskInput = $( '.addTaskWrapper input' );
+    
     const generateId = namespace => `${namespace}-${Date.now()}-${Math.ceil(Math.random()*100)}`
+
     const createListString = name =>
-        `<div class="list" id="${generateId('list')}">
+        `<div class="list card" id="${generateId('list')}">
             <div class="listHeader">
                 <h4>${name}</h4>
-                <button>X</button>
+                <label class="mdl-button mdl-js-button mdl-button--icon">
+                    <i class="material-icons">clear</i>
+                </label>
+            </div>
+            <div class="addTaskWrapper">
+                <input class="mdl-textfield__input" type="text" name="sample" placeholder="Add task">
             </div>
             <div class="tasks">
-                
-            </div>
-            <div class="addTask">
-                <input type="text">
-                <button>Add task</button>
             </div>
         </div>`
-    const appendNewList = () => {
-         //  cogemos el text del input
-         let listName = addListInput.val();
 
-         // creamos el nodo .list
-         let list = $( createListString( listName ) );
 
-         // añadimos el node al DOM
-         $( '.lists' ).append( list )
+    const createTaskItem = texto => 
+        `<div class="task taskCard" id="${generateId('task')}">
+            <div class="text">${texto}</div>
+            <label class="mdl-button mdl-js-button mdl-button--icon">
+                <i class="material-icons">clear</i>
+            </label>
+        </div>`
+        
+    const appendNewList = (value) => {
+        // creamos el nodo .list
+        let list = $(createListString(value) );
 
-         // Limpiamos el texto del input
-         addListInput.val( '' );
+        // añadimos el node al DOM
+        $( '.lists' ).append( list )
+    }
+
+    const appendNewTask = (event, value) => {
+        //creamos el nodo .task
+        let task = $( createTaskItem (value));
+
+        //Acceder a la lista task y añadimos el node al DOM
+        $(event.target.parentNode.parentNode.querySelector('.tasks')).append(task);
     }
 
 
     // Listeners
-     addListInput.on( 'keyup', function ( event ) {
+    //Inserta Listas
+    $(document).on('keyup', '.addListWrapper input', function (event) {
         if ( event.keyCode === 13 ) {
-           appendNewList();
+            appendNewList($(this).val());
+            $(this).val('')
         }
     } )
 
-     $('.lists').on('click', '.listHeader button', function(event) {
-        let listNode = $(event.target.parentNode.parentNode);
+    //Borra Listas
+    $(document).on('click', '.listHeader label', function(event) {
+        let listNode = $(event.target.parentNode.parentNode.parentNode);
         listNode.detach();
-     })
+    })
 
+    //Inserta tareas
+    $(document).on('keyup', '.addTaskWrapper input', function (event) {
+        if (event.keyCode === 13 ) {
+            appendNewTask(event, $(this).val());
+            $(this).val('');
+        }
+    })
+
+    //Borra tareas
+    $(document).on('click', '.tasks label', function(event){
+        let tasknode = $(event.target.parentNode.parentNode);
+        tasknode.detach();
+    })
 } )

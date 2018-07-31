@@ -1,44 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport"
-              content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible"
-              content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <!--jquery-->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!--Material Design según NPM-->
+        <link rel="stylesheet" href="/node_modules/material-design-lite/material.min.css">
+        <script src="/node_modules/material-design-lite/material.min.js"></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <!-- Material Design Lite (menu)
+        <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+        <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">-->
+        <!--Propio-->
+        <link rel="stylesheet" href="main.css">
         <script src="app.js"></script>
         <title>Scrum-board</title>
     </head>
-
     <body>
-        <header class="addListWrapper">
-            <input type="text"
-                   placeholder="Add list">
-            <button>Add</button>
-        </header>
-        <section class="lists">
-            <div class="list">
-                <div class="listHeader">
-                    <h4>backlog</h4>
-                    <button>X</button>
-                </div>
-                <div class="tasks">
-                    <div class="task">
-                        <div class="text">aprender jQuery</div>
-                        <button>
-                              X
-                          </button>
+        <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+            <header class="mdl-layout__header">
+                <div class="mdl-layout__header-row">
+                    <div class="mdl-layout-spacer"></div>
+                    <div class="addListWrapper mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right">
+                        <label class="mdl-button mdl-js-button mdl-button--icon" for="fixed-header-drawer-exp">
+                            <i class="material-icons">add</i>
+                        </label>
+                        <div class="mdl-textfield__expandable-holder">
+                            <input class="mdl-textfield__input" type="text" name="sample" id="fixed-header-drawer-exp" placeholder="Add list">
+                        </div>
                     </div>
                 </div>
-                <div class="addTask">
-                    <input type="text">
-                    <button>Add task</button>
-                </div>
-            </div>
-
-        </section>
+            </header>
+        </div>
+        <div class="cuerpo">
+            <section class="lists">
+                    <!--<div class="list card">
+                        <div class="listHeader">
+                            <h4>backlog</h4>
+                            <label class="mdl-button mdl-js-button mdl-button--icon">
+                                <i class="material-icons">clear</i>
+                            </label>
+                        </div>
+                        <div class="addTaskWrapper">
+                            <input class="mdl-textfield__input" type="text" name="sample" placeholder="Add task">
+                        </div>
+                        <div class="tasks">
+                            <div class="task taskCard">
+                                <div class="text"> Aprender jQuery</div>
+                                <label class="mdl-button mdl-js-button mdl-button--icon">
+                                    <i class="material-icons">clear</i>
+                                </label>
+                            </div>
+                        </div>
+                    </div>-->
+            </section>
+        </div>
     </body>
-
 </html>

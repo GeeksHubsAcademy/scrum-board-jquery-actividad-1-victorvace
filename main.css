@@ -1,0 +1,108 @@
+html {
+    
+    font-family: 'Roboto', sans-serif;
+    font-size: calc(13px + 1vw);
+}
+
+.cuerpo {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background: #ffffff;
+    margin: 0;
+    padding: 2em;
+}
+
+.lists {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    min-height: 100vh;
+    flex: 1;
+    background: #ffffff;
+    padding: 2em;
+}
+
+.tasks {
+    display: block;
+    align-items: center;
+    max-width: 100vh;
+    padding: 0.1em;
+}
+
+section a {
+    font-weight: 400;
+    font-size: 0.8rem;
+    align-items: center;
+    padding: 1vw 2vw;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    color: azure;
+    background: #039be5;
+}
+
+nav {
+    background: azure;
+}
+
+footer {
+    display: block;
+    text-align: center;
+    padding: 2em;
+}
+
+footer a {
+    font-weight: 400;
+    font-size: 0.8rem;
+    padding: 1vw 2vw;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    color: azure;
+    background: #039be5;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 2rem;
+    color: #000000;
+    opacity: 1;
+}
+
+h3 {
+    font-weight: 400;
+    font-size: 2rem;
+    color: #000000;
+    opacity: 0.6;
+}
+
+h4, p {
+    font-weight: 300;
+    color: #000000;
+    opacity: 0.6;
+}
+
+.card {
+    background: #fff;
+    border-radius: 2px;
+    display: block;
+    margin: 1rem;
+    position: relative;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.taskCard {
+    background: #fff;
+    border-radius: 2px;
+    display: block;
+    margin: 0.25rem;
+    position: relative;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.card:hover, .taskCard:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
