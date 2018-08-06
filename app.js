@@ -1,24 +1,6 @@
 $( document ).ready( function () {
-    //let addListInput = $( '.addListWrapper input' );
-    //let addTaskInput = $( '.addTaskWrapper input' );
     
     const generateId = namespace => `${namespace}-${Date.now()}-${Math.ceil(Math.random()*100)}`
-
-    /*const createListString = name =>
-    `<div class="list card" id="${generateId('list')}">
-        <div class="listHeader">
-            <h4>${name}</h4>
-            <label class="mdl-button mdl-js-button mdl-button--icon">
-                <i class="material-icons">clear</i>
-            </label>
-        </div>
-        <div class="addTaskWrapper">
-            <input class="mdl-textfield__input" type="text" name="sample" placeholder="Add task">
-        </div>
-        <ul class="tasks demo-list-control mdl-list">
-            
-        </ul>
-    </div>`*/
 
     const createListString = name =>
         `<div class="list card" id="${generateId('list')}">
@@ -34,14 +16,6 @@ $( document ).ready( function () {
             <div class="tasks">
             </div>
         </div>`
-
-    /*const createTaskItem = texto => 
-        `<li class="mdl-list__item mdl-list__item--three-line" taskCard id="${generateId('task')}>
-            <span class="mdl-list__item-primary-content">${texto}</span>
-            <span class="mdl-list__item-secondary-content">
-                <i class="material-icons">clear</i>
-            </span>
-        </li>`*/
 
     const createTaskItem = texto => 
         `<div class="task taskCard" id="${generateId('task')}">
