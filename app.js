@@ -29,7 +29,7 @@ $( document ).ready( function () {
         // creamos el nodo .list
         let list = $(createListString(value) );
         // añadimos el node al DOM si value no está vacío
-        (value === '')?console.log('Lista vacía'):$( '.lists' ).append( list )
+        (value === '')? console.log('Lista vacía') :   $( '.lists' ).append( list )
     }
 
     const appendNewTask = (event, value) => {
@@ -37,7 +37,7 @@ $( document ).ready( function () {
         let task = $( createTaskItem (value));
 
         //Acceder a la lista task y añadimos el node al DOM si el valor no está vacío
-        (value === '')?console.log('Tarea vacía'):$(event.target.parentNode.parentNode.querySelector('.tasks')).append(task);
+        (value === '')? console.log('Tarea vacía')  :   $(event.target.parentNode.parentNode.querySelector('.tasks')).append(task);
     }
 
 
