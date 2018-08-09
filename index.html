@@ -1,39 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <!--jquery-->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <!--Material Design Lite Descargado-->    
-        <link rel="stylesheet" href="css/material.min.css">
-        <script src="css/material.min.js"></script>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-        <!--Propio-->
-        <link rel="stylesheet" href="main.css">
-        <script src="app.js"></script>
-        <title>Scrum-board</title>
-    </head>
-    <body>
-        <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-            <header class="mdl-layout__header">
-                <div class="mdl-layout__header-row">
-                    <div class="mdl-layout-spacer"></div>
-                    <div class="addListWrapper mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right">
-                        <label class="mdl-button mdl-js-button mdl-button--icon" for="fixed-header-drawer-exp">
-                            <i class="material-icons">add</i>
-                        </label>
-                        <div class="mdl-textfield__expandable-holder">
-                            <input class="mdl-textfield__input" type="text" name="sample" id="fixed-header-drawer-exp" placeholder="Add list">
-                        </div>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!--Material Design Lite Descargado-->
+    <link rel="stylesheet" href="css/material.min.css">
+    <script src="css/material.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!--Propio-->
+    <link rel="stylesheet" href="main.css">
+    <script src="app.js"></script>
+    <title>Scrum-board</title>
+</head>
+
+<body>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <header class="mdl-layout__header">
+            <div class="mdl-layout__header-row">
+                <div class="mdl-layout-spacer"></div>
+                <div class="addListWrapper mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right">
+                    <label class="mdl-button mdl-js-button mdl-button--icon" for="fixed-header-drawer-exp">
+                        <i class="material-icons">add</i>
+                    </label>
+                    <div class="mdl-textfield__expandable-holder">
+                        <input class="mdl-textfield__input" type="text" name="sample" id="fixed-header-drawer-exp" placeholder="Add list">
                     </div>
                 </div>
-            </header>
-        </div>
-        <div class="cuerpo">
-            <section class="lists">
-            </section>
-        </div>
-    </body>
+            </div>
+        </header>
+    </div>
+    <div class="cuerpo">
+        <section class="lists">
+            <!--Antigua Card-->
+            <!--<div class="list card" id="list1">
+                <div>
+                    <div class="mdl-card__title">
+                        <h2 class="mdl-card__title-text">Welcome</h2>
+                    </div>
+                </div>
+                <div class="addTaskWrapper">
+                    <input class="mdl-textfield__input" type="text" name="sample" placeholder="Add task">
+                </div>
+                <div class="tasks">
+                    <div class="task taskCard" id="tarea1">
+                        <div>
+                            <label class="mdl-button mdl-js-button mdl-button--icon">
+                                <i class="material-icons">clear</i>
+                            </label>
+                        </div>
+                        <div class="text" contenteditable="true">Tarea 1</div>
+                    </div>
+                </div>
+                <div class="mdl-card__menu listHeader">
+                    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                        <i class="material-icons">more_vert</i>
+                    </button>
+                </div>
+            </div>-->
+            <!--CARD MATERIAL DESIGN LITE
+            <div class="mdl-card mdl-shadow--2dp">
+                <div class="mdl-card__title">
+                    <h2 class="mdl-card__title-text">Welcome</h2>
+                </div>
+                <div class="mdl-card__supporting-text tasks">
+                    <!--INICIO TAREAS
+                    <div class="task taskCard" id="1">
+                        <div class="menuTask">
+                            <label class="mdl-button mdl-js-button mdl-button--icon">
+                                <i class="material-icons">clear</i>
+                            </label>
+                            <input type="checkbox" name="check" value="true">
+                        </div>
+                        <div class="text" contenteditable="true">texto</div>
+                    </div>
+                    <!--FIN TAREAS
+                </div>
+                <div class="mdl-card__actions mdl-card--border addTaskWrapper">
+                    <input class="mdl-textfield__input" type="text" name="sample" placeholder="Add task">
+                </div>
+                <div class="mdl-card__menu listHeader">
+                    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                        <i class="material-icons">clear</i>
+                    </button>
+                </div>
+            </div>-->
+        </section>
+    </div>
+</body>
+
 </html>
